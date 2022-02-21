@@ -1,0 +1,10 @@
+Hashing
+
+It should always map a large key into same small key
+
+It should generate value from 0 to m-1 where m is the size of hash table
+
+It is faster for integer 0(1) and for string 0(Un) where un is length of string
+
+It should uniformly distribute large keys into the hash table slot.
+

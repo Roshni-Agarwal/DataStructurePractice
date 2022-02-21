@@ -1,0 +1,7 @@
+Direct index table
+
+we can add delete search number in 0(1) but when we will work with large data it will take lots of memory like if we take phone numbers it will take the space 10 to the power of 10.
+and also if we have index as character or string it won't work so for that we will go for hashing.
+
+In DIA we can use key as an index in an array.
+It also don't work for floting point numbers.

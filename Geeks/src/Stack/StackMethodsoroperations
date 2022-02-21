@@ -1,0 +1,17 @@
+
+Stack Operation or methods
+
+1. isEmpty returns true if stack is empty else false
+
+2. push(x)  Insert an item to the top of the stack
+
+3. pop() Removes an item from the top 
+
+4. peek() return the top item.
+
+5.size() returns the size of stack
+
+
+Underflow: when pop() or peek() called on empty stack
+
+Overflow when push called on a full stack

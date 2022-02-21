@@ -1,0 +1,52 @@
+Collision
+
+If we know the keys in advance like how many item to be inseted then we can use perfect hashing which can granties no collision.
+
+If we don't knows the keys in advance there is a possiblity for collision for handle that we use below methods
+Chaining (make a chain of colliding item)
+Open Addressing (use the same array if the key is occupied we try to put the item in some other slot )
+   	linear probling
+   	Quadratic probing
+   	Double Hashing
+   	
+   	
+   	
+   	CHAINING
+   	
+   	We use array of linked list header
+   	m=no. of slots in Hash table
+   	n= no. of keys to be inserted
+   	load factor <=n/m
+   	expected chain length= alpha
+   	
+   	(< alpha)
+   	
+   	expected time to search = 0(1+<)
+   	expected time to insert/delete=0(1+<)
+   	
+   	data structure for storing chains
+   	linked list Search O(l),delete O(l),insertO(l) l is length of linked list (not cash friendly)
+   	Dynamic size arrays Search O(l),delete O(l),insertO(l) l is length of linked list (cash friendly)
+   	self balancing BST Search O(l),delete O(l),insertO(l) l is length of linked list (not cash friendly)
+   	
+   	
+   	OPEN ADDRESSING
+   	
+   	no. of slots in hash table >= no. of keys to be inserted
+   	
+   	cache friendly
+   	
+   	linear probing: linearly search for next empty slots when there is a collision.
+   	
+   	chaining												Open Addressing
+   	
+   	Hash table never fills                                  Table may become fill and resizing becomes mandatory
+   	
+   	Less sensitive to hash function							Extra care required for clustring
+   	
+   	Poor cache performance									Cache friendly
+   	
+   	Extra space for links									Extra space might be needed to achieve same performance as chaining
+   	
+   	
+   	
