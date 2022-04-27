@@ -1,0 +1,65 @@
+Infix PostFix Prefix Introduction
+
+Infix:x+y
+postFix: xy+
+prefix:+xy
+
+
+Advantage of prefix and postfix
+
+1. Do not require parenthesis,precedence rule and associativity rules.
+
+2. Can be evaluated by writing a program that traverses the given expression exactly once
+
+
+infix					prefix					postfix
+x+y*Z					+x*yz					xyz*+
+(x+y)*z					*+xyz					xy+z*
+
+
+Algorithm infix to postfix
+
+1.Create an empty stack,st
+2. Do following for every character xfrom left to right.
+3. if x is 
+	a) operand:output it
+	b)Left Parenthesis:Push to st
+	c)Right Parenthesis: pop from st until left parenthesis is found output the popped operators
+	d)Operator: If st is empty push x to st else compare with st top
+		(i) Higher precedence(than st top) push to st
+		(ii) Lower precedence, pop st top and output until a lower precedence operator is found. Then push sto st.
+		(iii) Equal precedence,use associativity.
+4.pop and ouput everything from st.
+
+
+
+Algorithm for Evaluation of postfix
+1) create an empty stack st
+2)Traverse through every symbol x of given postfix
+	1)If x is an operand,push to st
+	2)Else(x is an operator)
+		(i)op1=st.pop(0);
+		(ii)op2=st.pop();
+		(iii) Compute op2 x op1 and push the result to st.
+	3)Return st.top();
+	
+
+	
+Algorithm Infix to prefix using stack
+
+1. Create an empty stack st
+2. Create an empty string prefix
+3. Do the following for every character c from right to left.
+4. If c is :
+	a)operand: push to st
+	b)right parenthesis: push to st
+	c)Left Parenthesis: pop from st until right parenthesis is found.Append the popped character to prefix.
+	d)operator: If st is empty push c to st.Alse compare with st top.
+		(i) Higher precedence (than st top) push c to st.
+		(ii) Lower precedence pop st top and append the popped item to prefix until a 
+		     higher precedence operator is found (or st become empty).push c to st.
+		(iii)Equal precedence:Use associativity.
+5. pop everything from st and append to prefix
+6.Return reverse of prefix.
+
+

@@ -1,0 +1,18 @@
+Fractional Knapsack algorithm
+
+1. Calculate ratio (value/Weight) for every item.
+2. Sort all item in decreasing order of the ratio.
+3.Initialize res=0,curr-cap=given-cap;
+4.Do following for every item I in sorted order
+	(a) Else if (I.weight <= curr-cap)
+		{
+			curr-cap -= I.weight;
+			res += I.value;
+		}
+	(b)Else
+		{ 
+			res += (I.value) * (curr-cap/I.weight);
+			return res;
+		}
+
+5. Return res;

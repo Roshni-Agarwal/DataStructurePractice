@@ -1,0 +1,21 @@
+
+In Dequeue we have two end front and rear.
+
+Implementation
+1.LinkedList(DoublyLinkedList)
+2.ArrayList(circularArray)
+
+
+Applications
+
+1.A Dequeue can be used as both Stack and Queue
+2.Maintaining History of actions
+3.A steal process scheduling algorithm
+4.Implementing a priority queue with two types of priorities
+5.Maximum or minimum of all subarrays of size k in an arrays.
+
+functions that throw Exceptions
+addFirst(),addLast(),removeFirst(),removeLast(),getFirst(),getLast()
+
+Equivalent function that do not throw Exception 
+offerFirst(),offerLast(),pollFirst(),pollLasrt(),peekFirst(),peekLast()
